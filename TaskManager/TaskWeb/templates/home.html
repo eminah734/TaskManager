@@ -1,0 +1,22 @@
+{%extends 'base.html' %}
+
+
+{% block content %}
+    <h1>Task Manager</h1>
+
+    {% for tweet in tweets %}
+        <div class="container text-center">
+            <div class="alert alert-primary" role="alert">
+                {{ tweet.body }}
+                <small class="text-muted">Posted by @{{ tweet.user.profile }} on ({{ tweet.created_at }})</small>
+            </div>
+        </div>
+        
+
+        <br>
+
+    {% endfor %}
+
+
+
+{% endblock %}
