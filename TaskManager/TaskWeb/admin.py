@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group, User
-from .models import Profile, Tweet
+from .models import Profile, Task
 
 # Register your models here.
 
@@ -22,5 +22,5 @@ class UserAdmin(admin.ModelAdmin):
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
 
-admin.site.register(Tweet)
+admin.site.register(Task)
 

@@ -1,16 +1,16 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from .models import Profile, Tweet
-from .forms import TweetForm, SignUpForm
+from .models import Profile, Task
+from .forms import NewTaskForm, SignUpForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 
 
 def home(request):
-    tweets = Tweet.objects.all().order_by("-created_at")
+    tasks = Task.objects.all().order_by("-created_at")
     
-    return render(request, 'home.html', {"tweets":tweets})
+    return render(request, 'home.html', {"tasks":tasks})
 
 def profile_list(request):
     if request.user.is_authenticated:
@@ -24,7 +24,7 @@ def profile_list(request):
 def profile(request, pk):
     if request.user.is_authenticated:
         profile = Profile.objects.get(user_id=pk)
-        tweets = Tweet.objects.filter(user_id=pk).order_by("-created_at")
+        tasks = Task.objects.filter(user_id=pk).order_by("-created_at")
 
         if request.method == "POST":
             current_user = request.user.profile
@@ -37,23 +37,23 @@ def profile(request, pk):
                 current_user.follows.add(profile)
                 messages.success(request, ("You have followed this user!"))
             current_user.save()
-        return render(request, "profile.html", {"profile":profile , "tweets":tweets})
+        return render(request, "profile.html", {"profile":profile , "task":tasks})
     else:
         messages.success(request, ("You must be logged in to view this page!"))
         return redirect('home')
     
 
-def tweet(request):
+def addNewTask(request):
     if request.user.is_authenticated:
-        form = TweetForm(request.POST or None)
+        form = NewTaskForm(request.POST or None)
         if request.method == "POST":
             if form.is_valid():
-                tweet = form.save(commit=False)
-                tweet.user = request.user
-                tweet.save()
-                messages.success(request, ("You successfully tweeted!"))
-                return redirect('tweet')
-        return render(request, "tweet.html", {"form":form})
+                task = form.save(commit=False)
+                task.user = request.user
+                task.save()
+                messages.success(request, ("You successfully added a new Task!"))
+                return redirect('newTask')
+        return render(request, "newTask.html", {"form":form})
     else:
         messages.success(request, ("You must be logged in to view this page!"))
         return redirect('home')

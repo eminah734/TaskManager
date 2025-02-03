@@ -1,14 +1,14 @@
 from django import forms
-from .models import Tweet
+from .models import Task
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 
-class TweetForm(forms.ModelForm):
-    body = forms.CharField( required=True, widget=forms.widgets.Textarea(attrs={"placeholder":"Type your tweet", "class":"form-control"}),label="")
+class NewTaskForm(forms.ModelForm):
+    body = forms.CharField( required=True, widget=forms.widgets.Textarea(attrs={"placeholder":"Write your task", "class":"form-control"}),label="")
 
     class Meta:
-        model = Tweet
+        model = Task
         exclude = ("user",)
 
 class SignUpForm(UserCreationForm):

@@ -4,8 +4,8 @@ from django.db.models.signals import post_save
 
 # Create your models here.
 
-class Tweet(models.Model):
-    user = models.ForeignKey(User, related_name="tweets", on_delete=models.DO_NOTHING)
+class Task(models.Model):
+    user = models.ForeignKey(User, related_name="tasks", on_delete=models.DO_NOTHING)
     body = models.CharField(max_length=150)
     created_at = models.DateTimeField(auto_now_add=True)
 
