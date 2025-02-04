@@ -10,16 +10,22 @@
             <div class="col-8">
                 <h1>{{ profile.user.username }}'s Profile</h1>
                 <br>
-                {% if tweets %}
-                    {% for tweet in tweets %}
-
-                    <div class="alert alert-primary" role="alert">
-                        {{ tweet.body }}
-                        <small class="text-muted">Posted by @{{ tweet.user.profile }} on ({{ tweet.created_at }})</small>
-                    </div>
-
-                        <br><br>
-
+                {% if tasks %}
+                    {% for task in tasks %}
+                        <div class="container text-center">
+                            <div class="alert alert-primary" role="alert">
+                                <strong>{{ task.body }}</strong><br>
+                                <small class="text-muted">
+                                    Category: {{ task.get_category_display }} | 
+                                    Priority: {{ task.get_priority_display }} | 
+                                    Posted by @{{ task.user.username }} on {{ task.created_at }}
+                                </small>
+                                <br>
+                                <a href="{% url 'editTask' task.id %}" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="{% url 'deleteTask' task.id %}" class="btn btn-sm btn-danger">Delete</a>
+                            </div>
+                        </div>
+                        <br>
                     {% endfor %}
                 {% endif %}
             </div>
