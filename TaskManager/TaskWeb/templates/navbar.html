@@ -1,34 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
-  <div class="container-fluid">
-      <a class="navbar-brand custom-brand" href="{% url 'home' %}">Task Manager</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              
-              {% if user.is_authenticated %}
-              <li class="nav-item">
-                <a class="nav-link custom-link" href="{% url 'task' %}">New Task</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link custom-link" href="{% url 'profile' request.user.id %}">My Profile</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link custom-link" href="{% url 'profile_list' %}">Profile List</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link custom-link" href="{% url 'logout' %}">Logout</a>
-              </li>
-              {% else %}
-              <li class="nav-item">
-                  <a class="nav-link custom-link" href="{% url 'login' %}">Login</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link custom-link" href="{% url 'register' %}">Register</a>
-              </li>
-              {% endif %}
-          </ul>
-      </div>
-  </div>
+<nav class="navbar">
+    <a class="navbar-brand" href="{% url 'home' %}">Task Manager</a>
+    <ul class="navbar-nav">
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'task' %}">New Task</a></li>
+            <li><a href="{% url 'profile' request.user.id %}">My Profile</a></li>
+            <li><a href="{% url 'profile_list' %}">Profile List</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+        {% endif %}
+    </ul>
 </nav>

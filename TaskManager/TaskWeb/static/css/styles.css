@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343a40;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Większy rozmiar czcionki dla głównego odnośnika */
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: #fff;
+    text-decoration: none;
+    margin-right: auto; /* Przesuwa główny odnośnik na lewo */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem; /* Odstęp między odnośnikami */
+    font-size: 1rem;
+}
+
+.navbar-nav a:hover {
+    color: #ffdd57;
+}
+/* Kontener */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Alerty */
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+}
+
+.alert-primary {
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    color: #004085;
+}
+
+/* Przyciski */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Formularze */
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Karty */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+/* Listy */
+.list-group {
+    list-style: none;
+}
+
+.list-group-item {
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #ddd;
+    margin-bottom: -1px;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.list-group-item:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Tekst */
+.text-muted {
+    color: #6c757d;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Profile Page */
+.profile-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.profile-main {
+    flex: 1;
+}
+
+.profile-sidebar {
+    flex: 1;
+}
+
+.custom-alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    color: #004085;
+}
+
+.custom-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.custom-card-header {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.custom-card-body {
+    padding: 1rem;
+}
+
+.custom-card-text {
+    margin: 0;
+}
+
+.custom-btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+
+.custom-btn-success:hover {
+    background-color: #218838;
+}
+
+.custom-btn-warning {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+}
+
+.custom-btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.custom-btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.custom-btn-danger:hover {
+    background-color: #c82333;
+}
