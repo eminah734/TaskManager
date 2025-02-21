@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
-
 {% if profile %}
-    <div class="custom-container">
+    <div class="container">
         <div class="profile-content">
             <div class="profile-main">
                 <h1>{{ profile.user.username }}'s Profile</h1>
@@ -13,21 +11,20 @@
                     {% for task in tasks %}
                         <div class="custom-alert">
                             <strong>{{ task.body }}</strong><br>
-                            <small class="custom-text-muted">
+                            <small class="text-muted">
                                 Category: {{ task.get_category_display }} | 
                                 Priority: {{ task.get_priority_display }} | 
                                 Posted by @{{ task.user.username }} on {{ task.created_at }}
                             </small>
                             <br>
-                            <a href="{% url 'editTask' task.id %}" class="custom-btn custom-btn-warning">Edit</a>
-                            <a href="{% url 'deleteTask' task.id %}" class="custom-btn custom-btn-danger">Delete</a>
+                            <a href="{% url 'editTask' task.id %}" class="btn btn-warning">Edit</a>
+                            <a href="{% url 'deleteTask' task.id %}" class="btn btn-danger">Delete</a>
                         </div>
                         <br>
                     {% endfor %}
                 {% endif %}
             </div>
             <div class="profile-sidebar">
-                <br>
                 <div class="custom-card">
                     <h5 class="custom-card-header">Follows</h5>
                     <div class="custom-card-body">
@@ -53,9 +50,9 @@
                 <form method="POST">
                     {% csrf_token %}
                     {% if profile in user.profile.follows.all %}
-                        <button class="custom-btn custom-btn-danger" name="follow" value="unfollow" type="submit">Unfollow @{{ profile.user.username }}</button>
+                        <button class="btn btn-danger" name="follow" value="unfollow" type="submit">Unfollow @{{ profile.user.username }}</button>
                     {% else %}
-                        <button class="custom-btn custom-btn-success" name="follow" value="follow" type="submit">Follow @{{ profile.user.username }}</button>
+                        <button class="btn btn-success" name="follow" value="follow" type="submit">Follow @{{ profile.user.username }}</button>
                     {% endif %}
                 </form>
                 <br>

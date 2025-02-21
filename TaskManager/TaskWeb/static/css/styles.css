@@ -7,13 +7,12 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f8f9fa;
+    background-color: #e9ecef;
     color: #333;
 }
 
-/* Navbar */
 .navbar {
-    background-color: #343a40;
+    background-color: #2c3e50;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -21,11 +20,11 @@ body {
 }
 
 .navbar-brand {
-    font-size: 1.5rem; /* Większy rozmiar czcionki dla głównego odnośnika */
-    font-weight: bold; /* Pogrubienie tekstu */
-    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ecf0f1;
     text-decoration: none;
-    margin-right: auto; /* Przesuwa główny odnośnik na lewo */
+    margin-right: auto;
 }
 
 .navbar-nav {
@@ -37,23 +36,22 @@ body {
 }
 
 .navbar-nav a {
-    color: #fff;
+    color: #ecf0f1;
     text-decoration: none;
-    margin-left: 1.5rem; /* Odstęp między odnośnikami */
+    margin-left: 1.5rem;
     font-size: 1rem;
 }
 
 .navbar-nav a:hover {
-    color: #ffdd57;
+    color: #f1c40f;
 }
-/* Kontener */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
 }
 
-/* Alerty */
 .alert {
     padding: 1rem;
     margin-bottom: 1rem;
@@ -67,12 +65,11 @@ body {
 }
 
 .alert-primary {
-    background-color: #cce5ff;
-    border: 1px solid #b8daff;
-    color: #004085;
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
 }
 
-/* Przyciski */
 .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -83,46 +80,45 @@ body {
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #3498db;
     color: #fff;
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
 }
 
 .btn-secondary {
-    background-color: #6c757d;
+    background-color: #95a5a6;
     color: #fff;
     border: none;
 }
 
 .btn-secondary:hover {
-    background-color: #5a6268;
+    background-color: #7f8c8d;
 }
 
 .btn-danger {
-    background-color: #dc3545;
+    background-color: #e74c3c;
     color: #fff;
     border: none;
 }
 
 .btn-danger:hover {
-    background-color: #c82333;
+    background-color: #c0392b;
 }
 
 .btn-warning {
-    background-color: #ffc107;
+    background-color: #f39c12;
     color: #000;
     border: none;
 }
 
 .btn-warning:hover {
-    background-color: #e0a800;
+    background-color: #d35400;
 }
 
-/* Formularze */
 .form-control {
     width: 100%;
     padding: 0.5rem;
@@ -132,11 +128,10 @@ body {
 }
 
 .form-control:focus {
-    border-color: #007bff;
+    border-color: #3498db;
     outline: none;
 }
 
-/* Karty */
 .card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -154,7 +149,6 @@ body {
     padding: 1rem;
 }
 
-/* Listy */
 .list-group {
     list-style: none;
 }
@@ -175,23 +169,21 @@ body {
     border-bottom-right-radius: 4px;
 }
 
-/* Tekst */
 .text-muted {
-    color: #6c757d;
+    color: #7f8c8d;
 }
 
 .text-center {
     text-align: center;
 }
 
-/* Profile Page */
 .profile-content {
     display: flex;
     gap: 2rem;
 }
 
 .profile-main {
-    flex: 1;
+    flex: 3;
 }
 
 .profile-sidebar {
@@ -202,9 +194,9 @@ body {
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 4px;
-    background-color: #cce5ff;
-    border: 1px solid #b8daff;
-    color: #004085;
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
 }
 
 .custom-card {
@@ -231,31 +223,31 @@ body {
 }
 
 .custom-btn-success {
-    background-color: #28a745;
+    background-color: #2ecc71;
     color: #fff;
     border: none;
 }
 
 .custom-btn-success:hover {
-    background-color: #218838;
+    background-color: #27ae60;
 }
 
 .custom-btn-warning {
-    background-color: #ffc107;
+    background-color: #f39c12;
     color: #000;
     border: none;
 }
 
 .custom-btn-warning:hover {
-    background-color: #e0a800;
+    background-color: #d35400;
 }
 
 .custom-btn-danger {
-    background-color: #dc3545;
+    background-color: #e74c3c;
     color: #fff;
     border: none;
 }
 
 .custom-btn-danger:hover {
-    background-color: #c82333;
+    background-color: #c0392b;
 }

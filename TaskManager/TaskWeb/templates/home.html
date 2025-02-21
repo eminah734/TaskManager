@@ -3,8 +3,8 @@
 {% block content %}
     <h1>Task Manager</h1>
     {% for task in tasks %}
-        <div class="container text-center">
-            <div class="alert alert-primary" role="alert">
+        <div class="container">
+            <div class="alert alert-primary">
                 <strong>{{ task.body }}</strong><br>
                 <small class="text-muted">
                     Category: {{ task.get_category_display }} | 
@@ -12,8 +12,8 @@
                     Posted by @{{ task.user.username }} on {{ task.created_at }}
                 </small>
                 <br>
-                <a href="{% url 'editTask' task.id %}" class="btn btn-sm btn-warning">Edit</a>
-                <a href="{% url 'deleteTask' task.id %}" class="btn btn-sm btn-danger">Delete</a>
+                <a href="{% url 'editTask' task.id %}" class="btn btn-warning">Edit</a>
+                <a href="{% url 'deleteTask' task.id %}" class="btn btn-danger">Delete</a>
             </div>
         </div>
         <br>

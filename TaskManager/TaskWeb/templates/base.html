@@ -1,4 +1,4 @@
-{% load static %} 
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,16 +8,14 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">  
   </head>
   <body>
-
     {% include 'navbar.html' %}
     <div class="container">
       {% if messages %}
         {% for message in messages %}
-          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <div class="alert alert-warning">
             {{message}}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="btn-close" onclick="this.parentElement.style.display='none';">&times;</button>
           </div>
-
         {% endfor %}
       {% endif %}
       <br>
